@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eefbff;
+    font-family: "Inter";
+}
+
+.hero {
+    padding: 40px 0;
+    .container {
+        max-width: 1200px;
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+.top-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-top-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .city-name {
+        font-weight: 600;
+        font-size: 36px;
+    }
+    .degree {
+        font-weight: 700;
+        font-size: 70px;
+    }
+    .des {
+        font-weight: 600;
+        font-size: 24px;
+    }
+}
+
+.right-top-hero {
+    width: 250px;
+    height: 250px;
+}
+
+.bottom-hero {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    .row {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .text {
+                color: #00000082;
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.hourly-forecast {
+    padding: 40px 0;
+    .container {
+        max-width: 1200px;
+        width: 95%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+        gap: 40px;
+        justify-content: space-between;
+        align-items: center;
+        .hour-card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px;
+            background: #02020220;
+            border-radius: 12px;
+            text-align: center;
+        }
+    }
+}
