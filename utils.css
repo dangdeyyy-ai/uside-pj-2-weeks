@@ -33,6 +33,10 @@
     display: flex;
 }
 
+.w100 {
+    width: 100%;
+}
+
 .c-blue-light {
     color: var(--blue-light1);
 }
