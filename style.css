@@ -8,7 +8,40 @@ body {
     background-color: #ffffff;
     font-family: "Inter";
 }
-
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+.header {
+    background-color: #74e1ff7e;
+    .logo {
+        width: 150px;
+    }
+    .box-search {
+        max-width: 365px;
+        width: 100%;
+        .search__bar {
+            outline: unset;
+            height: 40px;
+            border-radius: 8px;
+            max-width: 280px;
+            width: 100%;
+            padding: 0 16px;
+            border: 2px solid rgba(0, 0, 0, 0.142);
+        }
+        .background-search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 40px;
+            background-color: #0088ff;
+            color: white;
+            border-radius: 8px;
+        }
+    }
+}
 .hero {
     padding: 40px 0;
     .container {
@@ -103,6 +136,7 @@ body {
         }
     }
 }
+<<<<<<< HEAD
 
 .daily-forecast {
     padding: 40px 0;
@@ -132,4 +166,34 @@ body {
             text-align: center;
         }
     }
+=======
+.footer {
+    background-color: #74e1ff7e;
+    padding: 8px 0 35px 0;
+    .footer__bar {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+    .logo {
+        width: 150px;
+    }
+    .box_infor {
+        display: flex;
+        gap: 40px;
+        .infor {
+            width: calc((100% - 300px) / 4);
+            .item {
+                width: 25px;
+                height: 25px;
+            }
+            .color__content {
+                opacity: 60%;
+            }
+        }
+    }
+    .color__copyright {
+        opacity: 60%;
+    }
+>>>>>>> dd22302149bfecde0db9a5c388020caa84f4020c
 }
