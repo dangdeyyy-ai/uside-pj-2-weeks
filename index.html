@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Uside weather forecast</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="utils.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="j-between a-center g20">
+                    <a href="index.html"
+                        ><img src="picture/Logo.png" class="logo"
+                    /></a>
+                    <!-- dự báo thời tiết -->
+                    <div class="box-search PC Mobile Tablet a-center g5">
+                        <input
+                            type="search"
+                            placeholder="Tìm thành phố..."
+                            class="search__bar"
+                            id="cityInput"
+                        />
+                        <div class="background-search f20 w5" id="searchBtn">
+                            Tìm
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="hero">
+            <div class="container">
+                <div class="top-hero">
+                    <div class="left-top-hero">
+                        <div class="city-name">
+                            Thời tiết hiện tại của <br />
+                            <span id="cityName"></span>
+                        </div>
+                        <div class="degree" id="hcmDegree"></div>
+                        <div class="des" id="hcmDes"></div>
+                    </div>
+                    <img class="right-top-hero" id="hcmWeatherIcon" />
+                </div>
+                <div class="bottom-hero">
+                    <div class="row">
+                        <div class="box">
+                            <div class="text">Cảm giác như</div>
+                            <div class="data" id="hcmFL"></div>
+                        </div>
+                        <div class="box">
+                            <div class="text">Độ ẩm</div>
+                            <div class="data" id="hcmHumi"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box">
+                            <div class="text">Tầm nhìn</div>
+                            <div class="data" id="hcmVisi"></div>
+                        </div>
+                        <div class="box">
+                            <div class="text">Áp suất khí quyển</div>
+                            <div class="data" id="hcmPr"></div>
+                        </div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="box">
+                            <div class="text">Tốc độ gió</div>
+                            <div class="data" id="hcmWind"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hourly-forecast">
+            <div class="container">
+                <div class="title">Dự báo 12 giờ tới</div>
+                <div class="card"></div>
+            </div>
+        </div>
+        <div class="daily-forecast">
+            <div class="container">
+                <div class="title">Dự báo 5 ngày tới</div>
+                <div class="days"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="flex-c g30 w100">
+                    <div class="j-between flex-r m-flex-c g20 box_infor">
+                        <div class="flex-c g5 infor">
+                            <div class="f24 w7">Nguồn dữ liệu</div>
+                            <div class="f16 w5">Open Weather Map</div>
+                        </div>
+                        <div class="flex-c g5 infor">
+                            <div class="f24 w7">Pháp lý</div>
+                            <div class="flex-c g5">
+                                <div class="f16 w5 color__content">
+                                    Điều khoản dịch vụ
+                                </div>
+                                <div class="f16 w5 color__content">
+                                    Chính sách bao mật
+                                </div>
+                                <div class="f16 w5 color__content">
+                                    Cấp quyền
+                                </div>
+                                <div class="f16 w5 color__content">
+                                    Chính sách Cookie
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-c g5 infor">
+                            <div class="f24 w7">Điều hướng web</div>
+                            <div class="flex-c g5">
+                                <div class="f16 w5 color__content">
+                                    Giới thiệu
+                                </div>
+                                <div class="f16 w5 color__content">
+                                    Thông tin liên hệ
+                                </div>
+                                <div class="f16 w5 color__content">
+                                    Câu hỏi thường gặp / Hỗ trợ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-c g10 infor">
+                            <div class="f24 w7">Our Social</div>
+                            <div class="PC Mobile Tablet g15">
+                                <img src="picture/Instagram.svg" class="item" />
+                                <img src="picture/Facebook.svg" class="item" />
+                                <img src="picture/Twitter.svg" class="item" />
+                                <img src="picture/Youtube.svg" class="item" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f12 w5 color__copyright text-center">
+                        © 2025 Project by Your Group. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
