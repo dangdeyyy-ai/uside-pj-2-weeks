@@ -243,10 +243,10 @@ body {
         .row {
             .box {
                 .text {
-                    font-size: 17px;
+                    font-size: 12px;
                 }
                 .data {
-                    font-size: 22px;
+                    font-size: 16px;
                 }
             }
         }
