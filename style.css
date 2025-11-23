@@ -44,6 +44,8 @@ body {
 }
 .hero {
     padding: 40px 0;
+    background-image: url(/picture/bg.png);
+    background-size: cover;
     .container {
         max-width: 1200px;
         width: 95%;
@@ -96,7 +98,7 @@ body {
             flex-direction: column;
             gap: 10px;
             .text {
-                color: #0000008c;
+                color: #000000;
                 font-weight: 600;
                 font-size: 18px;
             }
