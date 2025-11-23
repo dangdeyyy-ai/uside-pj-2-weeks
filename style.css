@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #eefbff;
+    background-color: #ffffff;
     font-family: "Inter";
 }
 
@@ -61,7 +61,11 @@ body {
             gap: 10px;
             .text {
                 color: #00000082;
-                font-weight: 500;
+                font-weight: 600;
+                font-size: 24px;
+            }
+            .data {
+                font-weight: 600;
                 font-size: 18px;
             }
         }
@@ -69,23 +73,62 @@ body {
 }
 
 .hourly-forecast {
+    background-color: #eefbff;
     padding: 40px 0;
     .container {
         max-width: 1200px;
         width: 95%;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
-        gap: 40px;
-        justify-content: space-between;
-        align-items: center;
+        .title {
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+        }
+        .card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+            gap: 40px;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
         .hour-card {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            padding: 10px;
+            gap: 10px;
+            padding: 20px;
             background: #02020220;
             border-radius: 12px;
+            text-align: center;
+        }
+    }
+}
+
+.daily-forecast {
+    padding: 40px 0;
+    .container {
+        max-width: 1200px;
+        width: 95%;
+        margin: 0 auto;
+
+        .title {
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+        }
+        .days {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+            gap: 40px;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .day-card {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 10px;
             text-align: center;
         }
     }

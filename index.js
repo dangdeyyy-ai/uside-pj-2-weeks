@@ -41,31 +41,65 @@ async function getWeather() {
         // WIND SPEED
         document.getElementById("hcmWind").textContent =
             dataNow.wind.speed + " m/s";
-        const container = document.querySelector(".hourly-forecast .container");
-        container.innerHTML = "";
 
         // WEATHER FORECAST NEXT 12 HOURS
+        const card = document.querySelector(
+            ".hourly-forecast .container .card"
+        );
+        card.innerHTML = "";
         const next12 = dataForecast.list.slice(0, 5);
 
         next12.forEach((item) => {
-            const time = new Date(item.dt * 1000);
-            const hour = time.getHours().toString().padStart(2, "0") + ":00";
+            const start = new Date(item.dt * 1000);
+            const startHour =
+                start.getHours().toString().padStart(2, "0") + ":00";
+            const end = new Date(start.getTime() + 3 * 60 * 60 * 1000);
+            const endHour = end.getHours().toString().padStart(2, "0") + ":00";
 
             const icon = item.weather[0].icon;
             const temp = Math.round(item.main.temp);
             const des = item.weather[0].description;
 
-            const card = document.createElement("div");
-            card.classList.add("hour-card");
+            const hourCard = document.createElement("div");
+            hourCard.classList.add("hour-card");
 
-            card.innerHTML = `
-                <div class="h-time">${hour}</div>
+            hourCard.innerHTML = `
+                <div class="h-time">${startHour} - ${endHour}</div>
                 <img class="h-icon" src="https://openweathermap.org/img/wn/${icon}@4x.png">
                 <div class="h-temp">${temp}°C</div>
                 <div class="h-des">${des}</div>
             `;
 
-            container.appendChild(card);
+            card.appendChild(hourCard);
+        });
+
+        // WEATHER FORECAST NEXT 7 DAYS
+        const days = document.querySelector(".daily-forecast .container .days");
+        days.innerHTML = "";
+        const next7Days = dataForecast.list.filter((_, i) => i % 8 === 0);
+        next7Days.forEach((day) => {
+            const date = new Date(day.dt * 1000);
+            const weekDay = date.toLocaleDateString("vi-VN", {
+                weekday: "long",
+            });
+
+            const des = day.weather[0].description;
+            const maxTemp = Math.round(day.main.temp_max);
+            const minTemp = Math.round(day.main.temp_min);
+
+            const dailyCard = document.createElement("div");
+            dailyCard.classList.add("day-card");
+
+            dailyCard.innerHTML += `
+            <div class="day">
+                <div class="d-time">${weekDay}</div>
+                <img class="d-icon" src="https://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png">
+                <div class="d-temp">${minTemp} - ${maxTemp}°C</div>
+                <div class="d-des">${des}</div>
+            </div>
+        `;
+
+            days.appendChild(dailyCard);
         });
     } catch (error) {
         console.error("Lỗi:", error);
