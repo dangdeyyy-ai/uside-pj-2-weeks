@@ -209,6 +209,11 @@ body {
     }
 }
 
+.color__content {
+    text-decoration: none;
+    color: #3a5057;
+}
+
 @media only screen and (max-width: 660px) {
     .header {
         .container {
@@ -294,6 +299,7 @@ body {
         .container {
             .bottom-hero {
                 justify-content: start;
+                gap: 40px;
             }
         }
     }
