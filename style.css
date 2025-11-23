@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
 }
 .header {
-    background-color: #add8e6;
+    background-color: #a5e4f8;
     .logo {
         width: 150px;
     }
@@ -84,6 +84,9 @@ body {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    padding: 30px;
+    background: #bebaba21;
+    border-radius: 20px;
     .row {
         display: flex;
         flex-direction: column;
@@ -93,20 +96,20 @@ body {
             flex-direction: column;
             gap: 10px;
             .text {
-                color: #00000082;
+                color: #0000008c;
                 font-weight: 600;
-                font-size: 24px;
+                font-size: 18px;
             }
             .data {
                 font-weight: 600;
-                font-size: 18px;
+                font-size: 26px;
             }
         }
     }
 }
 
 .hourly-forecast {
-    background-color: #eefbff;
+    background-color: #e5f9ffd1;
     padding: 40px 0;
     .container {
         max-width: 1200px;
@@ -158,6 +161,8 @@ body {
             margin-top: 40px;
         }
         .day-card {
+            border-radius: 12px;
+            background-color: #02020220;
             display: flex;
             flex-direction: column;
             padding: 20px;
@@ -169,7 +174,7 @@ body {
 
 .footer {
     padding: 40px 0;
-    background-color: #add8e6;
+    background-color: #a5e4f8;
     .container {
         max-width: 1200px;
         width: 95%;
@@ -183,6 +188,11 @@ body {
         .item {
             width: 30px;
             height: 30px;
+        }
+        .infor {
+            .color__content {
+                opacity: 65%;
+            }
         }
     }
 }
@@ -226,10 +236,10 @@ body {
         .row {
             .box {
                 .text {
-                    font-size: 18px;
+                    font-size: 17px;
                 }
                 .data {
-                    font-size: 16px;
+                    font-size: 22px;
                 }
             }
         }
